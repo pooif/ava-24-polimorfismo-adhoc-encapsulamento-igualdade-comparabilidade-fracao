@@ -19,14 +19,14 @@ Fracao f1 = new Fracao(5, 10);
 System.out.println(f1); // 1/2
 System.out.println(f1.toString().equals("1/2"));
 System.out.println(f1.getNumerador() == 1);
-System.out.println(f1.getDenomiador() == 2);
+System.out.println(f1.getDenominador() == 2);
 
 Fracao f2 = new Fracao(3); // 3 inteiros
 System.out.println(f2.getString().equals("3/1"));
 
 Fracao f3 = new Fracao("30/40");
 System.out.println(f3.getNumerador() == 3);
-System.out.println(f3.getDenomiador() == 4);
+System.out.println(f3.getDenominador() == 4);
 System.out.println(f3.getString().equals("3/4"));
 
 Fracao f4 = new Fracao(0.345);
@@ -50,12 +50,12 @@ System.out.println(f1.getString().equals("16431/5000"));
 
 f3.somar("7/8");
 System.out.println(f3.getNumerador() == 13);
-System.out.println(f3.getDenomiador() == 8);
+System.out.println(f3.getDenominador() == 8);
 System.out.println(f3.getString().equals("13/8"));
 
 f3.somar(6.45);
 System.out.println(f3.getNumerador() == 323);
-System.out.println(f3.getDenomiador() == 40);
+System.out.println(f3.getDenominador() == 40);
 System.out.println(f3.getString().equals("323/40"));
 ```
 
@@ -65,7 +65,7 @@ Avaliar a equivalência de `Fracao` com `equals`, dadas instâncias de `Fracao` 
 **Casos de Teste:**
 
 ```java
-Fracao f6 = new Fracao(4, 5);
+Fracao f6 = new Fracao(1, 5);
 Fracao f7 = new Fracao(1, 3);
 Fracao f8 = new Fracao(125, 375);
 Fracao f9 = new Fracao(15, 75);
@@ -95,8 +95,8 @@ System.out.println(f13.compareTo(f12) > 0);
 System.out.println(f11.compareTo(f14) == 0);
 
 Comparable<Fracao> f15 = f10;
-Comparable<Fracao> f16 = new Fracao(20, 120)
-System.out.println(f15.compareTo(f16) == 0);
+Comparable<Fracao> f16 = new Fracao(20, 120);
+System.out.println(f15.compareTo((Fracao) f16) == 0);
 System.out.println(f16.compareTo(f14) < 0);
 
 Fracao[] fracoes = {f10, f11, f12, f13, f14};
